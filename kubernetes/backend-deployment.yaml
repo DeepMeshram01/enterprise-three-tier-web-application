@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudcart-backend
+  namespace: cloudcart
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudcart-backend
+  template:
+    metadata:
+      labels:
+        app: cloudcart-backend
+    spec:
+      containers:
+      - name: cloudcart-backend
+        image: deepmeshram0149/cloudcart-backend:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+        env:
+        - name: PORT
+          value: "5000"
+        - name: DB_HOST
+          value: "mysql-service"
+        - name: DB_USER
+          value: "root"
+        - name: DB_PASSWORD
+          value: "root123"
+        - name: DB_NAME
+          value: "cloudcart"

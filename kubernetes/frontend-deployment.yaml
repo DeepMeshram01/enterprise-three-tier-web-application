@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudcart-frontend
+  namespace: cloudcart
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudcart-frontend
+  template:
+    metadata:
+      labels:
+        app: cloudcart-frontend
+    spec:
+      containers:
+      - name: cloudcart-frontend
+        image: deepmeshram0149/cloudcart-frontend:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
