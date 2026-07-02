@@ -4,6 +4,9 @@
 
 This project demonstrates the complete DevOps lifecycle of deploying a production-style three-tier web application on Amazon Elastic Kubernetes Service (Amazon EKS). It showcases modern DevOps practices including Continuous Integration, Continuous Delivery (CI/CD), Docker containerization, Kubernetes orchestration, and cloud infrastructure deployment on AWS.
 
+<img width="1536" height="1024" alt="project2" src="https://github.com/user-attachments/assets/29a75bfd-5e5c-4c57-85ee-0f4e12f5c0b3" />
+
+
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange?style=for-the-badge\&logo=amazonaws)
 ![Amazon EKS](https://img.shields.io/badge/Amazon_EKS-Kubernetes-blue?style=for-the-badge\&logo=amazon-eks)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-326CE5?style=for-the-badge\&logo=kubernetes\&logoColor=white)
