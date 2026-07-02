@@ -1,0 +1,95 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKERHUB_USERNAME = "deepmeshram0149"
+        BACKEND_IMAGE = "${deepmeshram0149}/cloudcart-backend"
+        FRONTEND_IMAGE = "${deepmeshram0149}/cloudcart-frontend"
+    }
+
+    stages {
+
+        stage('Checkout Source') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build Backend Image') {
+            steps {
+                dir('backend') {
+                    sh 'docker build -t $BACKEND_IMAGE:$BUILD_NUMBER .'
+                }
+            }
+        }
+
+        stage('Build Frontend Image') {
+            steps {
+                dir('frontend') {
+                    sh 'docker build -t $FRONTEND_IMAGE:$BUILD_NUMBER .'
+                }
+            }
+        }
+
+        stage('Docker Hub Login') {
+            steps {
+                withCredentials([usernamePassword(
+                    credentialsId: 'dockerhub-credentials',
+                    usernameVariable: 'DOCKER_USER',
+                    passwordVariable: 'DOCKER_PASS'
+                )]) {
+                    sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+                }
+            }
+        }
+
+        stage('Push Backend Image') {
+            steps {
+                sh 'docker push $BACKEND_IMAGE:$BUILD_NUMBER'
+            }
+        }
+
+        stage('Push Frontend Image') {
+            steps {
+                sh 'docker push $FRONTEND_IMAGE:$BUILD_NUMBER'
+            }
+        }
+
+        stage('Deploy to EKS') {
+            steps {
+                sh '''
+                kubectl set image deployment/cloudcart-backend \
+                cloudcart-backend=$BACKEND_IMAGE:$BUILD_NUMBER \
+                -n cloudcart
+
+                kubectl set image deployment/cloudcart-frontend \
+                cloudcart-frontend=$FRONTEND_IMAGE:$BUILD_NUMBER \
+                -n cloudcart
+                '''
+            }
+        }
+
+        stage('Verify Rollout') {
+            steps {
+                sh '''
+                kubectl rollout status deployment/cloudcart-backend -n cloudcart
+                kubectl rollout status deployment/cloudcart-frontend -n cloudcart
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+
+        failure {
+            echo 'Pipeline failed.'
+        }
+    }
+}
