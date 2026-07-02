@@ -71,8 +71,79 @@
 <img width="1920" height="1080" alt="Screenshot (757)" src="https://github.com/user-attachments/assets/8888e357-13b0-4bd4-be3a-3311c83e65c5" />
 <img width="1920" height="1080" alt="Screenshot (758)" src="https://github.com/user-attachments/assets/da6f73b9-383f-489d-a1f6-9b1fda73f3c6" />
 <img width="1920" height="1080" alt="Screenshot (759)" src="https://github.com/user-attachments/assets/cd62cc12-84d7-42a0-9f1f-24b819692cf4" />
+<img width="1920" height="1080" alt="Screenshot (760)" src="https://github.com/user-attachments/assets/38dda819-c6dd-4ef4-9bf9-db29f9102e33" />
+<img width="1920" height="1080" alt="Screenshot (761)" src="https://github.com/user-attachments/assets/ba6fc0f4-fae7-4714-a597-9f01d761d212" />
+<img width="1920" height="1080" alt="Screenshot (762)" src="https://github.com/user-attachments/assets/ab18c068-4881-4742-be2a-a201145ad4dd" />
+<img width="1920" height="1080" alt="Screenshot (763)" src="https://github.com/user-attachments/assets/218f4955-9b17-4550-ac78-340337d3791c" />
+<img width="1920" height="1080" alt="Screenshot (764)" src="https://github.com/user-attachments/assets/e87362fd-f92b-4d42-9542-94a5ff9ce28b" />
+<img width="1920" height="1080" alt="Screenshot (765)" src="https://github.com/user-attachments/assets/575b3324-d620-4c97-a89a-d39e507a2766" />
+<img width="1920" height="1080" alt="Screenshot (766)" src="https://github.com/user-attachments/assets/a31dc7a7-e532-427c-82ae-8a2243fbffa4" />
+<img width="1920" height="1080" alt="Screenshot (767)" src="https://github.com/user-attachments/assets/fcde6b66-2ba8-4f01-a4be-8f07b870fd75" />
 
 
-## Phase 5 – Final Application Verification
 
-[screenshots]
+## Phase 5 – Backend
+
+<img width="1920" height="1080" alt="Screenshot (768)" src="https://github.com/user-attachments/assets/3e839a6e-a890-492a-806f-d33f40e2050a" />
+<img width="1920" height="1080" alt="Screenshot (769)" src="https://github.com/user-attachments/assets/97b8ab0b-63b2-42b6-8b78-9d44cf96a889" />
+<img width="1920" height="1080" alt="Screenshot (770)" src="https://github.com/user-attachments/assets/150b26b6-ea1b-444f-bfad-f15817868a70" />
+<img width="1920" height="1080" alt="Screenshot (771)" src="https://github.com/user-attachments/assets/46ffed56-35ba-43c4-86b2-44746f2a3978" />>
+<img width="1920" height="1080" alt="Screenshot (772)" src="https://github.com/user-attachments/assets/25c188d3-047d-4cea-9be6-85bf084a9ee1" />
+<img width="1920" height="1080" alt="Screenshot (773)" src="https://github.com/user-attachments/assets/704b9827-8c12-48db-92af-a627c31c089e" />
+<img width="1920" height="1080" alt="Screenshot (774)" src="https://github.com/user-attachments/assets/8fd838db-6dae-41e6-b27c-f24c820dfaf7" />
+<img width="1920" height="1080" alt="Screenshot (775)" src="https://github.com/user-attachments/assets/fa0a2b21-c85c-4ad5-af7f-1dd3ad5748eb" />
+
+
+
+## Phase 6 – Run MYSQL using Docker
+
+<img width="1920" height="1080" alt="Screenshot (776)" src="https://github.com/user-attachments/assets/a402994b-a206-4122-863c-dc20af9c925a" />
+<img width="1920" height="1080" alt="Screenshot (777)" src="https://github.com/user-attachments/assets/36e704ed-b735-44c6-bfcc-ececb7531359" />
+<img width="1920" height="1080" alt="Screenshot (778)" src="https://github.com/user-attachments/assets/4c4b150a-2a81-4d4e-8f65-ccf15663d6c6" />
+<img width="1920" height="1080" alt="Screenshot (779)" src="https://github.com/user-attachments/assets/9a7aad08-30ac-4724-b4d9-f2c88d1c0c1b" />
+
+<img width="1920" height="1080" alt="Screenshot (780)" src="https://github.com/user-attachments/assets/682610cd-3b62-41a1-8516-bcc2cb4de162" />
+<img width="1920" height="1080" alt="Screenshot (781)" src="https://github.com/user-attachments/assets/a542f130-05e0-4726-a7e3-9e76df04b1f9" />
+
+
+## Phase 7 – Dockerize the Backend
+
+<img width="1920" height="1080" alt="Screenshot (782)" src="https://github.com/user-attachments/assets/bb5a4780-774f-4d31-bb45-6eb2afb35b1d" />
+<img width="1920" height="1080" alt="Screenshot (783)" src="https://github.com/user-attachments/assets/2d6b3edb-5e41-4bff-8f45-6b994a3cf452" />
+<img width="1920" height="1080" alt="Screenshot (784)" src="https://github.com/user-attachments/assets/d62538a4-162b-463f-9c2a-6cd646867344" />
+<img width="1920" height="1080" alt="Screenshot (785)" src="https://github.com/user-attachments/assets/f1dc174d-8ecc-48dd-aba8-5fd895fca605" />
+<img width="1920" height="1080" alt="Screenshot (786)" src="https://github.com/user-attachments/assets/ce14992a-f1ad-45d6-b2f7-7cae1f1a0f58" />
+<img width="1920" height="1080" alt="Screenshot (787)" src="https://github.com/user-attachments/assets/d4026858-9c79-4c9b-a949-ee40a2a4a9ce" />
+<img width="1920" height="1080" alt="Screenshot (788)" src="https://github.com/user-attachments/assets/ea2fab22-eacc-4697-a880-248a34e0ae0a" />
+
+## Phase 8 – Push Docker Images to Docker Hub
+
+<img width="1920" height="1080" alt="Screenshot (789)" src="https://github.com/user-attachments/assets/d792c501-6df2-4fb4-bc1b-97dbed448128" />
+<img width="1920" height="1080" alt="Screenshot (790)" src="https://github.com/user-attachments/assets/c892dcd9-a803-40d9-a635-f44fd1e459a9" />
+
+## Phase 9 – Deploy Frontend on Amazon EKS
+
+<img width="1920" height="1080" alt="Screenshot (791)" src="https://github.com/user-attachments/assets/ae00360c-26cd-4751-952b-871f5a88d004" />
+<img width="1920" height="1080" alt="Screenshot (792)" src="https://github.com/user-attachments/assets/bdcadbf7-bc25-4d73-9623-2ab43352c651" />
+<img width="1920" height="1080" alt="Screenshot (793)" src="https://github.com/user-attachments/assets/4496438b-bab3-4ed9-a47a-e23bda7d11c7" />
+<img width="1920" height="1080" alt="Screenshot (794)" src="https://github.com/user-attachments/assets/c17cc6b0-7fc1-433c-920d-9af5f31769d9" />
+<img width="1920" height="1080" alt="Screenshot (795)" src="https://github.com/user-attachments/assets/5fdc3016-09fb-480c-a56b-fc7d77d63b2b" />
+<img width="1920" height="1080" alt="Screenshot (796)" src="https://github.com/user-attachments/assets/bc97d9c9-6401-4804-a5e7-94c0a880ccfe" />
+<img width="1920" height="1080" alt="Screenshot (797)" src="https://github.com/user-attachments/assets/d3c6ba8d-4849-4476-ac97-a7c1aa10123a" />
+<img width="1920" height="1080" alt="Screenshot (798)" src="https://github.com/user-attachments/assets/8c330841-0ab5-4798-8361-5c3101a6ecf8" />
+
+
+## Phase 10 –  Jenkins CICD Pipeline And Verification
+
+<img width="1920" height="1080" alt="Screenshot (799)" src="https://github.com/user-attachments/assets/acce113a-32ac-444a-9aef-875773ea2028" />
+<img width="1920" height="1080" alt="Screenshot (800)" src="https://github.com/user-attachments/assets/bfe60614-d12b-4e3b-9144-0854d02f624d" />
+<img width="1920" height="1080" alt="Screenshot (801)" src="https://github.com/user-attachments/assets/e37e872e-c3fe-4fcc-a3f3-68e4b88ab343" />
+<img width="1920" height="1080" alt="Screenshot (802)" src="https://github.com/user-attachments/assets/e2cd74be-e71d-4594-97d5-27bfc8e5af8b" />
+<img width="1920" height="1080" alt="Screenshot (803)" src="https://github.com/user-attachments/assets/8914f732-3fd8-463e-8ee0-0e4af289617b" />
+<img width="1920" height="1080" alt="Screenshot (804)" src="https://github.com/user-attachments/assets/ed6860d6-677f-4f61-a242-8c53e40df392" />
+<img width="1920" height="1080" alt="Screenshot (805)" src="https://github.com/user-attachments/assets/a2b75ad9-6240-4032-9584-8782c0a993ec" />
+<img width="1920" height="1080" alt="Screenshot (806)" src="https://github.com/user-attachments/assets/e70176a8-2984-4472-9e38-83b90217b3fb" />
+<img width="1920" height="1080" alt="Screenshot (807)" src="https://github.com/user-attachments/assets/8c82eb90-edc0-4546-8d6e-fe8c6af7d726" />
+<img width="1920" height="1080" alt="Screenshot (808)" src="https://github.com/user-attachments/assets/5e6ed7ef-0e4e-44c8-aa72-54d7c9626f5d" />
+<img width="1920" height="1080" alt="Screenshot (809)" src="https://github.com/user-attachments/assets/b54850ee-e320-403e-8e22-7d5bec424dbc" />
+<img width="1920" height="1080" alt="Screenshot (810)" src="https://github.com/user-attachments/assets/975ab196-e1ef-4d5d-9b5f-0ac785fab910" />
