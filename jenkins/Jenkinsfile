@@ -1,10 +1,11 @@
 pipeline {
     agent any
 
-    environment {
-        DOCKERHUB_USERNAME = "deepmeshram0149"
-        BACKEND_IMAGE = "${deepmeshram0149}/cloudcart-backend"
-        FRONTEND_IMAGE = "${deepmeshram0149}/cloudcart-frontend"
+        environment {
+            DOCKERHUB_USERNAME = "deepmeshram0149"
+
+            BACKEND_IMAGE = "${DOCKERHUB_USERNAME}/cloudcart-backend"
+            FRONTEND_IMAGE = "${DOCKERHUB_USERNAME}/cloudcart-frontend"
     }
 
     stages {
