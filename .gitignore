@@ -1,0 +1,23 @@
+# Node.js dependencies
+**/node_modules/
+
+# Environment files
+**/.env
+
+# React build
+frontend/build/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
