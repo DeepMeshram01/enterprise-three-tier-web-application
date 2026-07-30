@@ -3,8 +3,14 @@ kind: Service
 metadata:
   name: frontend-service
   namespace: enterprise-app
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: external
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: instance
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
 
 spec:
+  type: LoadBalancer
+
   selector:
     app: frontend
 
@@ -12,5 +18,3 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-
-  type: LoadBalancer

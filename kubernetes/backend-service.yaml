@@ -3,13 +3,17 @@ kind: Service
 metadata:
   name: backend-service
   namespace: enterprise-app
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "external"
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: "instance"
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
 
 spec:
+  type: LoadBalancer
+
   selector:
     app: backend
 
   ports:
     - port: 3001
       targetPort: 3001
-
-  type: LoadBalancer
