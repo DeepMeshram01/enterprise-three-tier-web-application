@@ -123,8 +123,8 @@ This project demonstrates an end-to-end cloud-native deployment workflow similar
 
 | Component | URL |
 |-----------|-----|
-| Application | https://YOUR_DOMAIN |
-| CloudFront | https://YOUR_CLOUDFRONT_DOMAIN |
+| Application | https://deepmeshram.online |
+| CloudFront | https://d7up8n8k0vjnf.cloudfront.net |
 | GitHub Repository | https://github.com/DeepMeshram01/enterprise-three-tier-web-application |
 
 ---
