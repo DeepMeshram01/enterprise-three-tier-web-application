@@ -14,6 +14,9 @@
 
 ---
 
+<img width="1536" height="1024" alt="ChatGPT Image Jul 31, 2026, 01_15_23 AM" src="https://github.com/user-attachments/assets/df4de921-8c42-487b-b443-21b26313aaca" />
+
+
 ## 📖 Project Overview
 
 This project demonstrates the complete deployment of an **Enterprise Three-Tier Web Application** on **Amazon Web Services (AWS)** using modern **DevOps practices**.
