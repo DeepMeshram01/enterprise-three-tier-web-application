@@ -582,34 +582,45 @@ Add screenshots for the following stages of the project:
 
 ---
 
-## Application
+## CloudFront
 
-- Home Page
-- Products Page
-- Database Connectivity
-- Working Application
+<img width="1366" height="768" alt="Screenshot (1051)" src="https://github.com/user-attachments/assets/8cfdac4c-19e7-41df-a949-fea4a4006731" />
+<img width="1366" height="768" alt="Screenshot (1052)" src="https://github.com/user-attachments/assets/6b02065a-eb1f-4bed-acd0-155f9a8d574c" />
+<img width="1366" height="768" alt="Screenshot (1053)" src="https://github.com/user-attachments/assets/834532f8-2573-4674-9922-649a0fc24332" />
+<img width="1366" height="768" alt="Screenshot (1054)" src="https://github.com/user-attachments/assets/583958fd-0a93-453c-8cee-9a8afa5863c4" />
+<img width="1366" height="768" alt="Screenshot (1055)" src="https://github.com/user-attachments/assets/ac704c63-4732-4603-a31d-b081d19e1722" />
 
 ---
 
-## CloudFront
+## Amazon Certificate Manager (ACM)
 
-- CloudFront Distribution
-- Distribution Status
-- Domain Name
+<img width="1366" height="768" alt="Screenshot (1056)" src="https://github.com/user-attachments/assets/b3f855af-2d86-4f03-9faa-d5583bbeaf5c" />
+<img width="1366" height="768" alt="Screenshot (1057)" src="https://github.com/user-attachments/assets/026cfc19-3480-40c7-9488-678306189def" />
+<img width="1366" height="768" alt="Screenshot (1058)" src="https://github.com/user-attachments/assets/2e8cdeb4-5ad8-489d-84c0-9aea793089e4" />
+<img width="1366" height="768" alt="Screenshot (1059)" src="https://github.com/user-attachments/assets/068ed917-8e68-470f-8112-4dc109d5fe83" />
+<img width="1366" height="768" alt="Screenshot (1060)" src="https://github.com/user-attachments/assets/6d4800c9-c278-49b0-9c38-ab86a6a3ff77" />
 
 ---
 
 ## Route 53
 
-- Hosted Zone
-- Alias Record
+<img width="1366" height="768" alt="Screenshot (1061)" src="https://github.com/user-attachments/assets/f74e6c98-8cce-422b-b035-5ebfbefb1ba2" />
+<img width="1366" height="768" alt="Screenshot (1062)" src="https://github.com/user-attachments/assets/42fc7b76-3b60-45b2-a526-519c44eadb9c" />
+<img width="1366" height="768" alt="Screenshot (1063)" src="https://github.com/user-attachments/assets/06401dbf-623e-45da-8c0a-7f0a43a01c20" />
+<img width="1366" height="768" alt="Screenshot (1064)" src="https://github.com/user-attachments/assets/209fdeea-24dd-4252-822d-35f39217bf8b" />
+
 
 ---
 
-## HTTPS
+## Application
 
-- ACM Certificate
-- Secure Website using HTTPS
+<img width="1366" height="768" alt="Screenshot (1065)" src="https://github.com/user-attachments/assets/7de8911e-5ead-4dde-a7c6-26dfc74397ec" />
+<img width="1366" height="768" alt="Screenshot (1066)" src="https://github.com/user-attachments/assets/54165e11-e8b0-41d7-85ab-8715fc2f3844" />
+<img width="1344" height="666" alt="313065336-88eb3f6a-d641-40d6-a039-00d864a75dfa" src="https://github.com/user-attachments/assets/3ac84e3d-056c-4298-891d-590cbbf4e4bc" />
+<img width="1335" height="653" alt="313065852-c6c3391f-fb88-4724-8281-5f6f6aec6080" src="https://github.com/user-attachments/assets/8401bd5f-e95d-4d03-b279-b36d92a36dc3" />
+<img width="1338" height="194" alt="313065868-df4305e7-f2b7-4ee6-985a-30debb74ab4c" src="https://github.com/user-attachments/assets/a4982a4e-1883-47b9-8bd8-7d6b4fcb4f63" />
+
+
 
 ---
 
