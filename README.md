@@ -508,3 +508,149 @@ The infrastructure follows AWS security best practices.
 
 ---
 
+---
+
+# 🐞 Challenges Faced & Solutions
+
+During the implementation of this project, several real-world challenges were encountered. Each issue was investigated, diagnosed, and resolved to achieve a successful deployment.
+
+| Challenge | Solution |
+|-----------|----------|
+| Frontend Pod remained in **Pending** state | Identified that the worker nodes had reached the maximum pod capacity. Increased the node group's desired capacity to allow additional pods to be scheduled. |
+| Frontend Service had no Endpoints | Verified pod labels and service selectors. Once the frontend pod was running successfully, the service automatically discovered the pod endpoint. |
+| Network Load Balancers were created as **Internal** | Updated the Kubernetes Service annotations by adding `service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing`, then recreated the LoadBalancer services. |
+| Application was not accessible through the Load Balancer | Verified Kubernetes Services, Endpoints, Target Groups, and Security Groups to ensure traffic could reach the application pods. |
+| CloudFront returned **504 Gateway Timeout** | Confirmed the frontend NLB was internet-facing and healthy. Updated the CloudFront origin configuration and waited for distribution deployment to complete. |
+| Jenkins Pipeline failed during image push | Corrected Docker Hub credentials and repository configuration in Jenkins. |
+| Kubernetes deployment updates were not reflected | Restarted deployments using `kubectl rollout restart` and verified the new pods were running successfully. |
+
+---
+
+# 📸 Project Screenshots
+
+Add screenshots for the following stages of the project:
+
+## AWS Infrastructure
+
+- Custom VPC
+- Public & Private Subnets
+- Route Tables
+- Internet Gateway
+- NAT Gateway
+- Security Groups
+
+---
+
+## Amazon EKS
+
+- EKS Cluster
+- Managed Node Group
+- Worker Nodes
+
+---
+
+## Jenkins
+
+- Jenkins Dashboard
+- Jenkins Pipeline
+- Successful Build History
+- Pipeline Console Output
+
+---
+
+## Docker
+
+- Docker Images
+- Docker Hub Repository
+
+---
+
+## Kubernetes
+
+- Deployments
+- Pods
+- Services
+- Load Balancers
+- Rolling Update
+
+---
+
+## Application
+
+- Home Page
+- Products Page
+- Database Connectivity
+- Working Application
+
+---
+
+## CloudFront
+
+- CloudFront Distribution
+- Distribution Status
+- Domain Name
+
+---
+
+## Route 53
+
+- Hosted Zone
+- Alias Record
+
+---
+
+## HTTPS
+
+- ACM Certificate
+- Secure Website using HTTPS
+
+---
+
+# 📈 Future Enhancements
+
+The following improvements can be implemented in future versions:
+
+- Deploy MySQL using Amazon RDS
+- Implement Horizontal Pod Autoscaler (HPA)
+- Configure Cluster Autoscaler
+- Add Prometheus and Grafana for monitoring
+- Centralize logs using Amazon CloudWatch
+- Integrate SonarQube for code quality analysis
+- Add automated security scanning to the CI/CD pipeline
+- Implement GitOps using ArgoCD or FluxCD
+- Use Terraform to provision the complete AWS infrastructure
+
+---
+
+# 👨‍💻 Author
+
+## Deep Meshram
+
+**Cloud & DevOps Engineer**
+
+- 🎓 B.Tech in Electronics & Telecommunication Engineering (2025)
+- ☁ Passionate about AWS Cloud & DevOps
+- 🐳 Skilled in Docker, Kubernetes, Jenkins, Git, Linux, and AWS Services
+
+### Connect with Me
+
+- **GitHub:** https://github.com/DeepMeshram01
+- **LinkedIn:** *(Add your LinkedIn profile URL here)*
+
+---
+
+# ⭐ If you found this project useful
+
+If you like this project, consider giving it a ⭐ on GitHub.
+
+Your support motivates me to build more cloud and DevOps projects.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+See the LICENSE file for more information.
+
+---
