@@ -128,3 +128,383 @@ This project demonstrates an end-to-end cloud-native deployment workflow similar
 | GitHub Repository | https://github.com/DeepMeshram01/enterprise-three-tier-web-application |
 
 ---
+
+---
+
+# 🛠️ Technology Stack
+
+| Category | Technologies |
+|----------|--------------|
+| **Cloud Platform** | Amazon Web Services (AWS) |
+| **Operating System** | Amazon Linux 2023 |
+| **Frontend** | React.js |
+| **Backend** | Node.js, Express.js |
+| **Database** | MySQL |
+| **Containerization** | Docker |
+| **Container Registry** | Docker Hub |
+| **Version Control** | Git & GitHub |
+| **CI/CD** | Jenkins |
+| **Container Orchestration** | Kubernetes |
+| **Managed Kubernetes** | Amazon Elastic Kubernetes Service (Amazon EKS) |
+| **Load Balancer** | AWS Network Load Balancer (NLB) |
+| **Content Delivery Network** | Amazon CloudFront |
+| **DNS Management** | Amazon Route 53 |
+| **SSL Certificate** | AWS Certificate Manager (ACM) |
+
+---
+
+# ☁️ AWS Services Used
+
+| AWS Service | Purpose |
+|-------------|---------|
+| **Amazon VPC** | Created an isolated and secure virtual network for the application. |
+| **Public Subnets** | Hosted internet-facing resources such as Network Load Balancers and NAT Gateway. |
+| **Private Application Subnets** | Hosted Amazon EKS worker nodes running frontend and backend applications. |
+| **Private Database Subnets** | Reserved for database workloads following network isolation best practices. |
+| **Internet Gateway** | Allowed internet access for public resources. |
+| **NAT Gateway** | Enabled private subnets to securely access the internet without exposing them publicly. |
+| **Route Tables** | Managed network routing between public and private subnets. |
+| **Security Groups** | Controlled inbound and outbound traffic for EC2 instances, EKS nodes, and Load Balancers. |
+| **IAM** | Managed authentication and authorization for AWS resources. |
+| **Amazon EC2** | Hosted the Jenkins CI/CD server. |
+| **Amazon EKS** | Managed Kubernetes cluster for deploying the application. |
+| **Elastic Network Interfaces (ENI)** | Enabled networking between Kubernetes Pods and AWS resources. |
+| **Amazon ECR / Docker Hub** | Docker Hub used to store application container images. |
+| **Network Load Balancer (NLB)** | Exposed Kubernetes services to the internet. |
+| **Amazon CloudFront** | Improved application performance by caching and delivering content globally. |
+| **AWS Certificate Manager (ACM)** | Provided SSL/TLS certificates for secure HTTPS communication. |
+| **Amazon Route 53** | Managed DNS records for the custom domain. |
+
+---
+
+# 📂 Repository Structure
+
+```text
+enterprise-three-tier-web-application/
+│
+├── backend/
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── server.js
+│   └── ...
+│
+├── frontend/
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── public/
+│   ├── src/
+│   └── ...
+│
+├── kubernetes/
+│   ├── backend-deployment.yaml
+│   ├── backend-service.yaml
+│   ├── frontend-deployment.yaml
+│   ├── frontend-service.yaml
+│   ├── mysql-deployment.yaml
+│   ├── mysql-service.yaml
+│   └── ...
+│
+├── Jenkinsfile
+├── README.md
+└── LICENSE
+```
+
+---
+
+# 🔄 CI/CD Workflow
+
+```
+Developer
+     │
+     ▼
+GitHub Repository
+     │
+     ▼
+Jenkins Pipeline
+     │
+     ▼
+Build Docker Images
+     │
+     ▼
+Push Images to Docker Hub
+     │
+     ▼
+Deploy Updated Images to Amazon EKS
+     │
+     ▼
+Kubernetes Rolling Update
+     │
+     ▼
+Network Load Balancer
+     │
+     ▼
+Amazon CloudFront
+     │
+     ▼
+Route53 Custom Domain
+     │
+     ▼
+Users
+```
+
+---
+
+# 🌐 Application Request Flow
+
+```
+User
+ │
+ ▼
+https://deepmeshram.online
+ │
+ ▼
+Amazon Route53
+ │
+ ▼
+Amazon CloudFront
+ │
+ ▼
+Network Load Balancer
+ │
+ ▼
+Frontend Pod (React)
+ │
+ ▼
+Backend Service
+ │
+ ▼
+Backend Pod (Node.js)
+ │
+ ▼
+MySQL Database
+```
+
+---
+
+---
+
+# 🚀 Deployment Workflow
+
+The project follows a complete DevOps lifecycle from source code management to production deployment.
+
+## Step 1: Source Code Management
+
+- Application source code is maintained in a GitHub repository.
+- Separate directories are used for the frontend, backend, and Kubernetes manifests.
+- Every code change is committed and pushed to GitHub.
+
+⬇
+
+## Step 2: Continuous Integration (CI)
+
+Jenkins continuously monitors the GitHub repository.
+
+Whenever new code is pushed:
+
+- Jenkins automatically triggers the pipeline.
+- Source code is cloned.
+- Docker images are built.
+- Build validation is performed.
+
+⬇
+
+## Step 3: Containerization
+
+Both applications are containerized using Docker.
+
+Containers created:
+
+- Frontend (React)
+- Backend (Node.js + Express)
+
+Each image is tagged with a version before deployment.
+
+⬇
+
+## Step 4: Docker Hub
+
+After successful image creation:
+
+- Images are pushed to Docker Hub.
+- Kubernetes always pulls the latest application image from Docker Hub.
+
+⬇
+
+## Step 5: Kubernetes Deployment
+
+Amazon EKS manages the Kubernetes cluster.
+
+Kubernetes resources used:
+
+- Deployments
+- Services
+- ReplicaSets
+- Pods
+
+Deployments automatically maintain the desired number of running application instances.
+
+⬇
+
+## Step 6: Database Deployment
+
+MySQL is deployed inside Kubernetes.
+
+The backend communicates with MySQL through an internal Kubernetes ClusterIP Service.
+
+⬇
+
+## Step 7: Network Load Balancer
+
+Frontend and Backend services are exposed using AWS Network Load Balancers.
+
+The Load Balancers distribute incoming traffic across Kubernetes worker nodes.
+
+⬇
+
+## Step 8: CloudFront
+
+Amazon CloudFront is configured in front of the frontend Network Load Balancer.
+
+Benefits:
+
+- Low latency
+- Global caching
+- Better performance
+- HTTPS support
+
+⬇
+
+## Step 9: Route53 + ACM
+
+A custom domain is configured using Route53.
+
+AWS Certificate Manager provides an SSL certificate, allowing secure HTTPS access to the application.
+
+---
+
+# ⚙ Jenkins CI/CD Pipeline
+
+The Jenkins pipeline performs the following automated steps:
+
+### Stage 1
+
+Checkout Source Code
+
+- Clone GitHub repository
+
+---
+
+### Stage 2
+
+Build Backend Image
+
+```
+docker build
+```
+
+---
+
+### Stage 3
+
+Build Frontend Image
+
+```
+docker build
+```
+
+---
+
+### Stage 4
+
+Push Images
+
+```
+docker push
+```
+
+Docker images are uploaded to Docker Hub.
+
+---
+
+### Stage 5
+
+Deploy to Amazon EKS
+
+```
+kubectl apply -f
+```
+
+Kubernetes updates the running application.
+
+---
+
+### Stage 6
+
+Rolling Update
+
+Kubernetes performs rolling updates without downtime.
+
+Old Pods are gradually replaced by new Pods.
+
+---
+
+# ☸ Kubernetes Resources Used
+
+| Resource | Purpose |
+|----------|---------|
+| Namespace | Isolates project resources |
+| Deployment | Manages application Pods |
+| ReplicaSet | Maintains desired number of Pods |
+| Pod | Runs application containers |
+| Service | Provides stable networking |
+| ClusterIP | Internal communication |
+| LoadBalancer | Internet access to application |
+| Configurations | Environment variables |
+| Labels & Selectors | Connect Services with Pods |
+
+---
+
+# 🔐 Security Implementation
+
+The infrastructure follows AWS security best practices.
+
+### Networking
+
+- Custom Amazon VPC
+- Public and Private Subnets
+- Private Application Tier
+- Private Database Tier
+
+---
+
+### Access Control
+
+- IAM Roles
+- Security Groups
+- Least Privilege Principle
+
+---
+
+### Traffic Management
+
+- Internet Gateway
+- NAT Gateway
+- Route Tables
+
+---
+
+### Secure Communication
+
+- HTTPS using ACM
+- CloudFront SSL Termination
+
+---
+
+### Kubernetes Security
+
+- Namespace Isolation
+- Internal ClusterIP Services
+- Separate frontend and backend Services
+
+---
+
