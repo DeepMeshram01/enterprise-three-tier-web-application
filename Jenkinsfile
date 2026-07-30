@@ -1,33 +1,47 @@
 pipeline {
     agent any
 
+    environment {
+        BACKEND_IMAGE = "deepmeshram0149/enterprise-backend:v2"
+    }
+
     stages {
 
         stage('Checkout Source Code') {
             steps {
-                echo 'Checking out source code from GitHub...'
                 checkout scm
             }
         }
 
-        stage('Project Structure') {
+        stage('Build Backend Image') {
             steps {
-                echo 'Listing project files...'
+                dir('backend') {
+                    sh 'docker build -t $BACKEND_IMAGE .'
+                }
+            }
+        }
 
-                sh '''
-                pwd
-                ls -la
-                ls -la backend
-                ls -la frontend
-                ls -la kubernetes
-                '''
+        stage('Push Backend Image') {
+            steps {
+                withCredentials([usernamePassword(
+                    credentialsId: 'dockerhub-creds',
+                    usernameVariable: 'DOCKER_USER',
+                    passwordVariable: 'DOCKER_PASS'
+                )]) {
+
+                    sh '''
+                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                    docker push $BACKEND_IMAGE
+                    docker logout
+                    '''
+                }
             }
         }
     }
 
     post {
         success {
-            echo 'Repository cloned successfully.'
+            echo 'Backend image built and pushed successfully.'
         }
 
         failure {
